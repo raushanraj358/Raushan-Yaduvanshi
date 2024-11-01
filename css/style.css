@@ -1531,11 +1531,12 @@ ul.social-slide li i.mac{
  margin-left: 7px;
     display: inline-block;
 }
-@media screen and (max-width: 600px) {
-  .callbacks_nav {
-    top: 47%;
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Less padding for mobile */
     }
 }
+
 .callbacks_tabs a{
  visibility: hidden;
 }
