@@ -85,8 +85,10 @@ sub {
   bottom: -.25em;
 }
 img {
-  border: 0;
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
 }
+
 svg:not(:root) {
   overflow: hidden;
 }
