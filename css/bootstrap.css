@@ -189,6 +189,21 @@ th {
   padding: 0;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+@media (max-width: 768px) {
+    /* Styles for mobile devices */
+    body {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
+    .container {
+        padding: 10px; /* Reduce padding */
+    }
+}
+
 @media print {
   *,
   *:before,
