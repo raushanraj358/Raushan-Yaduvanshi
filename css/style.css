@@ -1630,6 +1630,12 @@ a.callbacks_nav.callbacks1_nav.prev {
 @media(max-width:1600px){
 	
 }
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Less padding for mobile */
+    }
+}
+
 @media(max-width:1440px){
 	.banner {
 		min-height: 600px;
