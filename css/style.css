@@ -1631,6 +1631,15 @@ a.callbacks_nav.callbacks1_nav.prev {
 	
 }
 @media (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide regular navbar */
+    }
+    .hamburger {
+        display: block; /* Show hamburger menu */
+    }
+}
+
+@media (max-width: 768px) {
     .container {
         padding: 10px; /* Less padding for mobile */
     }
