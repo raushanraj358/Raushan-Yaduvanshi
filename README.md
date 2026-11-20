@@ -1,10 +1,30 @@
-![Screenshot (1)](https://user-images.githubusercontent.com/47501629/154631417-0eba3f5b-8319-41f8-980a-646baab409f4.png)
-![image](https://user-images.githubusercontent.com/47501629/172035017-557d88d8-cf58-4ba2-bb6c-95ebad6b51b4.png)
+# Raushan Raj — Portfolio
 
-![Screenshot (3)](https://user-images.githubusercontent.com/47501629/154631439-eccac18d-ee89-44d9-b532-ee989fae998d.png)
-![image](https://user-images.githubusercontent.com/47501629/172035040-31612456-8288-4ac5-9c0e-748f17858491.png)
+Personal portfolio of Raushan Raj (Yaduvanshi Raushan), Senior Software Engineer at UKG.
 
-![Screenshot (5)](https://user-images.githubusercontent.com/47501629/154631445-d55481da-129a-4ad6-8089-d2097dc0811e.png)
+- Plain HTML, CSS and vanilla JS: no build step, no frameworks
+- Responsive from small phones to wide desktops, with an app-style bottom tab bar on mobile
+- Light / dark theme (follows the system, with a manual toggle)
+- Installable as an app (web manifest + offline-capable service worker)
 
+## Structure
 
-This is my portfolio
+```
+index.html            page markup
+css/style.css         all styles
+js/main.js            theme toggle, typing effect, scroll reveal, active-section nav
+manifest.webmanifest  app install metadata
+sw.js                 service worker (network-first, offline fallback)
+images/               profile photo and app icons
+resume.pdf            downloadable CV
+```
+
+## Run locally
+
+```
+python3 -m http.server 8000
+```
+
+Then open http://localhost:8000. The service worker only runs over http(s), not `file://`.
+
+When you change assets, bump `VERSION` in `sw.js` so returning visitors drop the old cache.
