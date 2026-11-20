@@ -343,20 +343,18 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 @media (max-width: 960px) {
   .nav { display: none; }
   .header__actions { margin-left: auto; }
-  .hero__grid { grid-template-columns: 1fr; text-align: center; }
-  .hero__media { order: -1; }
-  .portrait { width: min(62vw, 260px); border-radius: 50%; aspect-ratio: 1; transform: none; }
-  .portrait img { border-radius: 50%; object-position: 50% 12%; }
-  .badge, .hero__cta, .socials { justify-content: center; }
-  .badge { display: block; justify-self: center; text-align: center; text-wrap: balance; }
-  .badge__dot { display: inline-block; margin-right: 8px; vertical-align: .1em; }
-  .hero__text { display: flex; flex-direction: column; align-items: center; }
   .about, .contact { grid-template-columns: 1fr; }
 }
 
 /* Phones: app-style layout */
 @media (max-width: 720px) {
   :root { --header-h: 58px; --tabbar-h: calc(64px + env(safe-area-inset-bottom)); }
+  .hero__grid { grid-template-columns: 1fr; }
+  .hero__media { order: -1; }
+  .portrait { width: min(62vw, 260px); border-radius: 50%; aspect-ratio: 1; transform: none; }
+  .portrait img { border-radius: 50%; object-position: 50% 12%; }
+  .badge { display: block; justify-self: center; text-align: center; text-wrap: balance; }
+  .badge__dot { display: inline-block; margin-right: 8px; vertical-align: .1em; }
   .brand__name { display: none; }
   .hero { min-height: auto; padding-top: calc(var(--header-h) + env(safe-area-inset-top) + 28px); padding-bottom: 56px; }
   .hero__cta { width: 100%; flex-direction: column; }
