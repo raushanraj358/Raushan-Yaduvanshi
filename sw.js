@@ -1,6 +1,6 @@
 /* Network-first service worker: always serves fresh content when online,
    falls back to the cached copy when offline. Bump VERSION to purge old caches. */
-const VERSION = 'v1';
+const VERSION = 'v2';
 const CACHE = `portfolio-${VERSION}`;
 const ASSETS = [
   './',

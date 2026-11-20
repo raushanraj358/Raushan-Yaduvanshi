@@ -1,6 +1,6 @@
 # Raushan Raj — Portfolio
 
-Personal portfolio of Raushan Raj (Yaduvanshi Raushan), Senior Software Engineer at UKG.
+Personal portfolio of Raushan Raj (Yaduvanshi Raushan), Senior Officer (BIS) at GAIL (India) Limited.
 
 - Plain HTML, CSS and vanilla JS: no build step, no frameworks
 - Responsive from small phones to wide desktops, with an app-style bottom tab bar on mobile
