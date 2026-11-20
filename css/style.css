@@ -178,18 +178,19 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .hero::before { width: 520px; height: 520px; background: var(--accent); top: -160px; right: -120px; }
 .hero::after { width: 420px; height: 420px; background: var(--accent-2); bottom: -180px; left: -140px; opacity: .25; }
-.hero__grid { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: clamp(32px, 6vw, 80px); }
+.hero__grid { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; column-gap: clamp(32px, 6vw, 80px); row-gap: 28px; }
 .badge {
-  display: inline-flex; align-items: center; gap: 10px; max-width: 620px;
+  display: inline-flex; align-items: center; gap: 10px;
   padding: 8px 16px; border-radius: 16px; font-size: 13.5px; font-weight: 500; line-height: 1.5; text-align: left;
   background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow);
 }
-.badge > span { max-width: 400px; text-wrap: balance; }
 .flag { display: inline-block; width: 1.5em; height: 1em; vertical-align: -.15em; margin-left: 2px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,.12); }
-.badge__role { display: block; width: fit-content; font-family: var(--font-display); font-size: 16px; font-weight: 700; line-height: 1.35; margin-bottom: 2px; }
+.badge { grid-column: 1 / -1; justify-self: start; margin: 0; font-size: 14.5px; }
+.badge .hl { font-family: var(--font-display); font-weight: 700; }
+@media (min-width: 1100px) { .badge { white-space: nowrap; } }
 .badge__dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--success); box-shadow: 0 0 0 0 var(--success); animation: pulse 2s infinite; }
 @keyframes pulse { 70% { box-shadow: 0 0 0 8px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
-.hero__title { font-size: clamp(2.5rem, 7vw, 4.6rem); margin-top: 22px; }
+.hero__title { font-size: clamp(2.5rem, 7vw, 4.6rem); }
 .hero__title .gradient-text { white-space: nowrap; }
 .hero__aka { margin: 10px 0 0; color: var(--muted); font-size: 1.05rem; }
 .hero__role { margin: 22px 0 32px; font-size: clamp(1.15rem, 2.4vw, 1.5rem); font-weight: 500; min-height: 1.6em; }
@@ -347,6 +348,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .portrait { width: min(62vw, 260px); border-radius: 50%; aspect-ratio: 1; transform: none; }
   .portrait img { border-radius: 50%; object-position: 50% 12%; }
   .badge, .hero__cta, .socials { justify-content: center; }
+  .badge { display: block; justify-self: center; text-align: center; text-wrap: balance; }
+  .badge__dot { display: inline-block; margin-right: 8px; vertical-align: .1em; }
   .hero__text { display: flex; flex-direction: column; align-items: center; }
   .about, .contact { grid-template-columns: 1fr; }
 }
@@ -356,7 +359,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   :root { --header-h: 58px; --tabbar-h: calc(64px + env(safe-area-inset-bottom)); }
   .brand__name { display: none; }
   .hero { min-height: auto; padding-top: calc(var(--header-h) + env(safe-area-inset-top) + 28px); padding-bottom: 56px; }
-  .hero__title { margin-top: 18px; }
   .hero__cta { width: 100%; flex-direction: column; }
   .hero__cta .btn { width: 100%; }
   .grid--2 { grid-template-columns: 1fr; }
