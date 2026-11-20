@@ -180,11 +180,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .hero::after { width: 420px; height: 420px; background: var(--accent-2); bottom: -180px; left: -140px; opacity: .25; }
 .hero__grid { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: clamp(32px, 6vw, 80px); }
 .badge {
-  display: inline-flex; align-items: center; gap: 10px; max-width: 560px;
+  display: inline-flex; align-items: center; gap: 10px; max-width: 620px;
   padding: 8px 16px; border-radius: 16px; font-size: 13.5px; font-weight: 500; line-height: 1.5; text-align: left;
   background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow);
 }
-.badge strong { font-weight: 600; }
+.badge > span { max-width: 400px; text-wrap: balance; }
+.badge__role { display: block; width: fit-content; font-family: var(--font-display); font-size: 17px; font-weight: 700; line-height: 1.35; margin-bottom: 2px; }
 .badge__dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--success); box-shadow: 0 0 0 0 var(--success); animation: pulse 2s infinite; }
 @keyframes pulse { 70% { box-shadow: 0 0 0 8px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
 .hero__title { font-size: clamp(2.5rem, 7vw, 4.6rem); margin-top: 22px; }
